@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope, FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -40,6 +40,17 @@ const About = () => {
               <FaEnvelope className="text-primary flex-shrink-0" />
               <span className="text-sm">fabriciolongodearaujo@gmail.com</span>
             </div>
+          </div>
+
+          <div className="mt-6">
+            <a
+              href="/fabriciolongodearaujo.pdf"
+              download
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md hover:brightness-110 transition-all text-sm"
+            >
+              <FaDownload />
+              Download Currículo
+            </a>
           </div>
         </motion.div>
       </div>
