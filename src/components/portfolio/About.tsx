@@ -46,9 +46,9 @@ const About = () => {
             <a
               href="/fabriciolongodearaujo.pdf"
               download
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md hover:brightness-110 transition-all text-sm"
+              className="inline-flex items-center gap-2 border border-primary/50 text-primary font-medium px-4 py-2 rounded-md hover:bg-primary/10 transition-all text-sm"
             >
-              <FaDownload />
+              <FaDownload className="text-xs" />
               Download Currículo
             </a>
           </div>

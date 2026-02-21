@@ -1,38 +1,84 @@
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { HiMenu, HiX } from "react-icons/hi";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+
+const navLinks = [
+  { href: "#home", label: "Início" },
+  { href: "#about", label: "Sobre" },
+  { href: "#skills", label: "Habilidades" },
+  { href: "#experience", label: "Experiência" },
+  { href: "#projects", label: "Projetos" },
+  { href: "#contact", label: "Contato" },
+];
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-md bg-background/70 border-b border-border/50"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/50"
     >
-      <span className="font-display text-lg font-bold text-foreground tracking-wide">
-        
-      </span>
-      <nav className="hidden md:flex items-center gap-8">
-        <a href="#home" className="text-sm text-muted-foreground hover:text-primary transition-colors">Início</a>
-        <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">Sobre</a>
-        <a href="#skills" className="text-sm text-muted-foreground hover:text-primary transition-colors">Habilidades</a>
-        <a href="#experience" className="text-sm text-muted-foreground hover:text-primary transition-colors">Experiência</a>
-        <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">Projetos</a>
-        <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contato</a>
-      </nav>
-      <div className="flex items-center gap-3">
-        <FaGithubSquare
-          fontSize={28}
-          className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-          onClick={() => window.open("https://github.com/FabricioLR", "_blank")}
-        />
-        <FaLinkedin
-          fontSize={28}
-          className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-          onClick={() => window.open("https://www.linkedin.com/in/fabricio-arauj/", "_blank")}
-        />
+      <div className="flex items-center justify-between px-6 md:px-12 py-4">
+        <span className="font-display text-lg font-bold text-foreground tracking-wide">
+          
+        </span>
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map(({ href, label }) => (
+            <a key={href} href={href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              {label}
+            </a>
+          ))}
+        </nav>
+        <div className="flex items-center gap-3">
+          <FaGithubSquare
+            fontSize={28}
+            className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
+            onClick={() => window.open("https://github.com/FabricioLR", "_blank")}
+          />
+          <FaLinkedin
+            fontSize={28}
+            className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
+            onClick={() => window.open("https://www.linkedin.com/in/fabricio-arauj/", "_blank")}
+          />
+          <button
+            className="md:hidden text-muted-foreground hover:text-primary transition-colors ml-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <HiX fontSize={26} /> : <HiMenu fontSize={26} />}
+          </button>
+        </div>
       </div>
+
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.nav
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden overflow-hidden border-t border-border/50 bg-background/95 backdrop-blur-md"
+          >
+            <div className="flex flex-col px-6 py-4 gap-4">
+              {navLinks.map(({ href, label }) => (
+                <a
+                  key={href}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
