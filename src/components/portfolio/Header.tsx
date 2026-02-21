@@ -14,18 +14,12 @@ const Header = () => {
         FabricioLR
       </span>
       <nav className="hidden md:flex items-center gap-8">
-        <a href="#home" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-          Início
-        </a>
-        <a href="#skills" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-          Habilidades
-        </a>
-        <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-          Projetos
-        </a>
-        <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-          Contato
-        </a>
+        <a href="#home" className="text-sm text-muted-foreground hover:text-primary transition-colors">Início</a>
+        <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">Sobre</a>
+        <a href="#skills" className="text-sm text-muted-foreground hover:text-primary transition-colors">Habilidades</a>
+        <a href="#experience" className="text-sm text-muted-foreground hover:text-primary transition-colors">Experiência</a>
+        <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">Projetos</a>
+        <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contato</a>
       </nav>
       <div className="flex items-center gap-3">
         <FaGithubSquare
