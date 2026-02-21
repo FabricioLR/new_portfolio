@@ -29,7 +29,16 @@ const Header = () => {
         </span>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(({ href, label }) => (
-            <a key={href} href={href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a
+              key={href}
+              href={href}
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.querySelector(href);
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               {label}
             </a>
           ))}
@@ -69,7 +78,12 @@ const Header = () => {
                 <a
                   key={href}
                   href={href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMenuOpen(false);
+                    const el = document.querySelector(href);
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {label}
