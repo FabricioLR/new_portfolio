@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import project1Img from "@/assets/project1.png";
 import project2Img from "@/assets/project2.png";
+import project3Img from "@/assets/project3.png";
 
 const projects = [
   {
@@ -18,6 +19,14 @@ const projects = [
     image: project2Img,
     link: "https://github.com/FabricioLR/Chat-front",
     tags: ["React", "TypeScript", "WebSocket"],
+  },
+  {
+    title: "Portfólio",
+    description:
+      "Site pessoal para apresentação de projetos. Escrito em JavaScript com o framework React, hospedado na Vercel.",
+    image: project3Img,
+    link: "https://github.com/FabricioLR/portfolio",
+    tags: ["React", "JavaScript", "Vercel"],
   },
 ];
 
