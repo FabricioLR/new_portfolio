@@ -1,6 +1,5 @@
-import { FaComputer, FaReact } from "react-icons/fa6";
-import { SiExpo } from "react-icons/si";
-import { FaServer, FaShieldAlt, FaDatabase } from "react-icons/fa";
+import { FaComputer } from "react-icons/fa6";
+import { FaServer, FaShieldAlt, FaDatabase, FaCloud } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -10,18 +9,6 @@ const skills = [
     subtitle: "NodeJS, Java, PHP e Python",
     description: "Programação funcional e orientada a objetos. APIs REST, autenticação e integração com bancos de dados.",
   },
-  /*{
-    Icon: FaReact,
-    title: "Frontend Dev",
-    subtitle: "React & TypeScript",
-    description: "Desenvolvimento Web com HTML, CSS, JS e React. Interfaces responsivas e performáticas com versionamento Git.",
-  },
-  {
-    Icon: SiExpo,
-    title: "Mobile Dev",
-    subtitle: "Expo & React Native",
-    description: "Desenvolvimento de aplicativos Android com React Native e Expo.",
-  },*/
   {
     Icon: FaServer,
     title: "Infraestrutura",
@@ -40,6 +27,12 @@ const skills = [
     subtitle: "MySQL & PostgreSQL",
     description: "Modelagem, consultas e administração de bancos de dados relacionais com MySQL e PostgreSQL.",
   },
+  {
+    Icon: FaCloud,
+    title: "Cloud Computing",
+    subtitle: "AWS & Oracle Cloud",
+    description: "Experiência com serviços de computação em nuvem da Amazon Web Services e Oracle Cloud Infrastructure.",
+  },
 ];
 
 const Skills = () => {
@@ -55,7 +48,7 @@ const Skills = () => {
           Habilidades
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {skills.map(({ Icon, title, subtitle, description }, i) => (
             <motion.div
               key={title}
