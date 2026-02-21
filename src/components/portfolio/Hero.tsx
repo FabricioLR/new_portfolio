@@ -46,7 +46,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-lg sm:text-xl md:text-2xl text-hero-subtitle tracking-widest uppercase"
           >
-            <ReactTyped strings={["Infraestructure - Back End Developer"]} typeSpeed={80} />
+            <ReactTyped strings={["Infrastructure - Back End Developer"]} typeSpeed={80} />
           </motion.h2>
         )}
       </div>
