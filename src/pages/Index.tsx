@@ -17,7 +17,7 @@ const Index = () => {
       <Projects />
       <Contact />
       <footer className="py-6 text-center text-xs text-muted-foreground bg-background border-t border-border">
-        © 2025 FabricioLR. Todos os direitos reservados.
+        © 2026 FabricioLR. Todos os direitos reservados.
       </footer>
     </div>
   );

@@ -13,20 +13,20 @@ const projects = [
     tags: ["PHP", "JavaScript", "CSS"],
   },
   {
-    title: "Chat",
-    description:
-      "Site para troca de mensagens feito em React e TypeScript que permite aos usuários enviarem mensagens em tempo real por meio do uso de Web Sockets.",
-    image: project2Img,
-    link: "https://github.com/FabricioLR/Chat-front",
-    tags: ["React", "TypeScript", "WebSocket"],
-  },
-  {
     title: "Portfólio",
     description:
       "Site pessoal para apresentação de projetos. Escrito em JavaScript com o framework React, hospedado na Vercel.",
     image: project3Img,
     link: "https://github.com/FabricioLR/portfolio",
     tags: ["React", "JavaScript", "Vercel"],
+  },
+  {
+    title: "Chat",
+    description:
+      "Site para troca de mensagens feito em React e TypeScript que permite aos usuários enviarem mensagens em tempo real por meio do uso de Web Sockets.",
+    image: project2Img,
+    link: "https://github.com/FabricioLR/Chat-front",
+    tags: ["React", "TypeScript", "WebSocket"],
   },
 ];
 

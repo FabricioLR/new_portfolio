@@ -28,7 +28,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-secondary">
+    <section id="experience" className="py-20 px-6 bg-secondary">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
