@@ -2,7 +2,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 const navLinks = [
   { href: "#home", label: "Início" },
@@ -15,6 +15,21 @@ const navLinks = [
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const scrollToSection = useCallback((href: string, closeMobile = false) => {
+    if (closeMobile) setMenuOpen(false);
+
+    // Small delay to let mobile menu close before scrolling
+    setTimeout(() => {
+      const id = href.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        const headerOffset = 70;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }, closeMobile ? 300 : 0);
+  }, []);
 
   return (
     <motion.header
@@ -34,8 +49,7 @@ const Header = () => {
               href={href}
               onClick={(e) => {
                 e.preventDefault();
-                const el = document.querySelector(href);
-                if (el) el.scrollIntoView({ behavior: "smooth" });
+                scrollToSection(href);
               }}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
@@ -80,9 +94,7 @@ const Header = () => {
                   href={href}
                   onClick={(e) => {
                     e.preventDefault();
-                    setMenuOpen(false);
-                    const el = document.querySelector(href);
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                    scrollToSection(href, true);
                   }}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
