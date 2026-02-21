@@ -10,7 +10,7 @@ const skills = [
     subtitle: "NodeJS, Java, PHP e Python",
     description: "Programação funcional e orientada a objetos. APIs REST, autenticação e integração com bancos de dados.",
   },
-  {
+  /*{
     Icon: FaReact,
     title: "Frontend Dev",
     subtitle: "React & TypeScript",
@@ -21,7 +21,7 @@ const skills = [
     title: "Mobile Dev",
     subtitle: "Expo & React Native",
     description: "Desenvolvimento de aplicativos Android com React Native e Expo.",
-  },
+  },*/
   {
     Icon: FaServer,
     title: "Infraestrutura",

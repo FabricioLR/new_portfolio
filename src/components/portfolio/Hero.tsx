@@ -1,24 +1,22 @@
 import { FaReact } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
-import { FaJava } from "react-icons/fa";
-import { SiMysql, SiRedux, SiPostgresql, SiSpringboot, SiSequelize, SiExpo, SiPhp } from "react-icons/si";
+import { FaJava, FaAws, FaLinux } from "react-icons/fa";
+import { SiMysql, SiRedux, SiPostgresql, SiSpringboot, SiSequelize, SiExpo, SiPhp, SiOracle} from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 const techs = [
-  { Icon: FaReact, label: "React" },
   { Icon: FaNodeJs, label: "Node.js" },
-  { Icon: TbBrandTypescript, label: "TypeScript" },
-  { Icon: FaJava, label: "Java" },
-  { Icon: SiMysql, label: "MySQL" },
-  { Icon: SiRedux, label: "Redux" },
-  { Icon: SiPostgresql, label: "PostgreSQL" },
-  { Icon: SiSpringboot, label: "Spring Boot" },
-  { Icon: SiSequelize, label: "Sequelize" },
-  { Icon: SiExpo, label: "Expo" },
   { Icon: SiPhp, label: "PHP" },
+  { Icon: FaJava, label: "Java" },
+  { Icon: TbBrandTypescript, label: "TypeScript" },
+  { Icon: SiPostgresql, label: "PostgreSQL" },
+  { Icon: SiMysql, label: "MySQL" },
+  { Icon: SiOracle, label: "Oracle" },
+  { Icon: FaAws, label: "Aws" },
+  { Icon: FaLinux, label: "Linux" }
 ];
 
 const Hero = () => {
@@ -48,7 +46,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-lg sm:text-xl md:text-2xl text-hero-subtitle tracking-widest uppercase"
           >
-            <ReactTyped strings={["Front — Back End Developer"]} typeSpeed={80} />
+            <ReactTyped strings={["Infraestructure - Back End Developer"]} typeSpeed={80} />
           </motion.h2>
         )}
       </div>

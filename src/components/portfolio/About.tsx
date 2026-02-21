@@ -30,11 +30,11 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="flex items-center gap-3 text-muted-foreground">
               <FaMapMarkerAlt className="text-primary flex-shrink-0" />
-              <span className="text-sm">Ceilândia – DF</span>
+              <span className="text-sm">Brasília – DF</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <FaGraduationCap className="text-primary flex-shrink-0" />
-              <span className="text-sm">Ciência da Computação – Estácio</span>
+              <span className="text-sm">Ciência da Computação</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <FaEnvelope className="text-primary flex-shrink-0" />
