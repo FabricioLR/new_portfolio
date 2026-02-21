@@ -1,26 +1,44 @@
-import { FaComputer } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa6";
+import { FaComputer, FaReact } from "react-icons/fa6";
 import { SiExpo } from "react-icons/si";
+import { FaServer, FaShieldAlt, FaDatabase } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skills = [
   {
     Icon: FaComputer,
     title: "Backend Dev",
-    subtitle: "NodeJS, Java e PHP",
+    subtitle: "NodeJS, Java, PHP e Python",
     description: "Programação funcional e orientada a objetos. APIs REST, autenticação e integração com bancos de dados.",
   },
   {
     Icon: FaReact,
     title: "Frontend Dev",
-    subtitle: "React",
-    description: "Experiência em desenvolvimento Web com HTML, CSS, JS e React framework. Interfaces responsivas e performáticas.",
+    subtitle: "React & TypeScript",
+    description: "Desenvolvimento Web com HTML, CSS, JS e React. Interfaces responsivas e performáticas com versionamento Git.",
   },
   {
     Icon: SiExpo,
     title: "Mobile Dev",
     subtitle: "Expo & React Native",
-    description: "Entusiasta na programação de aplicativos Android com React Native e Expo.",
+    description: "Desenvolvimento de aplicativos Android com React Native e Expo.",
+  },
+  {
+    Icon: FaServer,
+    title: "Infraestrutura",
+    subtitle: "Linux, Docker, Proxmox",
+    description: "Gerenciamento de servidores Linux (Cloud e on-premise), virtualização com Proxmox, containers Docker, Nginx, Bind e Zabbix.",
+  },
+  {
+    Icon: FaShieldAlt,
+    title: "Redes & Segurança",
+    subtitle: "Mikrotik, OpenVPN, Samba",
+    description: "Conhecimento em segurança e redes de computadores, configuração de equipamentos Mikrotik e monitoramento de infraestrutura.",
+  },
+  {
+    Icon: FaDatabase,
+    title: "Banco de Dados",
+    subtitle: "MySQL & PostgreSQL",
+    description: "Modelagem, consultas e administração de bancos de dados relacionais com MySQL e PostgreSQL.",
   },
 ];
 
@@ -37,14 +55,14 @@ const Skills = () => {
           Habilidades
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map(({ Icon, title, subtitle, description }, i) => (
             <motion.div
               key={title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
+              transition={{ delay: i * 0.1 }}
               whileHover={{ y: -6 }}
               className="bg-card border border-skill-border rounded-lg p-8 transition-shadow hover:shadow-xl hover:shadow-primary/10"
             >
