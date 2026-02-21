@@ -36,12 +36,12 @@ const Header = () => {
         </nav>
         <div className="flex items-center gap-3">
           <FaGithubSquare
-            fontSize={28}
+            fontSize={32}
             className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
             onClick={() => window.open("https://github.com/FabricioLR", "_blank")}
           />
           <FaLinkedin
-            fontSize={28}
+            fontSize={32}
             className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
             onClick={() => window.open("https://www.linkedin.com/in/fabricio-arauj/", "_blank")}
           />
