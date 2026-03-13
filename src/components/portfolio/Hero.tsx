@@ -16,7 +16,8 @@ const techs = [
   { Icon: SiMysql, label: "MySQL" },
   { Icon: SiOracle, label: "Oracle" },
   { Icon: FaAws, label: "Aws" },
-  { Icon: FaLinux, label: "Linux" }
+  { Icon: FaLinux, label: "Linux" },
+  { Icon: SiN8N, label: "n8n" }
 ];
 
 const Hero = () => {

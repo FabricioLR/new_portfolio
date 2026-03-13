@@ -33,6 +33,12 @@ const skills = [
     subtitle: "AWS & Oracle Cloud",
     description: "Experiência com serviços de computação em nuvem da Amazon Web Services e Oracle Cloud Infrastructure.",
   },
+  {
+    Icon: FaRobot,
+    title: "Automação",
+    subtitle: "n8n, APIs & IA",
+    description: "Criação de fluxos automatizados com n8n, integração com APIs externas e uso de inteligência artificial para automação de processos.",
+  },
 ];
 
 const Skills = () => {
