@@ -52,7 +52,7 @@ const Projects = () => {
           Meus Projetos
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map(({ title, description, image, link, tags }, i) => (
             <motion.div
               key={title}
