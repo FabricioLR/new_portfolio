@@ -1,5 +1,5 @@
 import { FaComputer } from "react-icons/fa6";
-import { FaServer, FaShieldAlt, FaDatabase, FaCloud } from "react-icons/fa";
+import { FaServer, FaShieldAlt, FaDatabase, FaCloud, FaRobot } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skills = [
