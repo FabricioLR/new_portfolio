@@ -1,5 +1,5 @@
 import { FaComputer } from "react-icons/fa6";
-import { FaServer, FaShieldAlt, FaDatabase, FaCloud } from "react-icons/fa";
+import { FaServer, FaShieldAlt, FaDatabase, FaCloud, FaRobot } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -32,6 +32,12 @@ const skills = [
     title: "Cloud Computing",
     subtitle: "AWS & Oracle Cloud",
     description: "Experiência com serviços de computação em nuvem da Amazon Web Services e Oracle Cloud Infrastructure.",
+  },
+  {
+    Icon: FaRobot,
+    title: "Automação",
+    subtitle: "n8n, APIs & IA",
+    description: "Criação de fluxos automatizados com n8n, integração com APIs externas e uso de inteligência artificial para automação de processos.",
   },
 ];
 
