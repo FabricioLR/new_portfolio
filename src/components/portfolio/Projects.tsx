@@ -2,8 +2,17 @@ import { motion } from "framer-motion";
 import project1Img from "@/assets/project1.png";
 import project2Img from "@/assets/project2.png";
 import project3Img from "@/assets/project3.png";
+import project4Img from "@/assets/project4.png";
 
 const projects = [
+  {
+    title: "Notícias Diárias",
+    description:
+      "Automação com n8n que captura notícias via RSS, resume com IA (Google Gemini) e envia diariamente pelo WhatsApp usando Evolution API.",
+    image: project4Img,
+    link: "https://github.com/FabricioLR/noticias-diarias",
+    tags: ["n8n", "Gemini AI", "WhatsApp", "Automação"],
+  },
   {
     title: "Estética",
     description:
@@ -43,7 +52,7 @@ const Projects = () => {
           Meus Projetos
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map(({ title, description, image, link, tags }, i) => (
             <motion.div
               key={title}

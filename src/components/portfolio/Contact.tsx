@@ -57,7 +57,7 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="w-full bg-primary text-primary-foreground font-semibold py-3 rounded-md hover:brightness-110 transition-all"
+            className="w-full border border-primary/50 text-primary font-medium py-3 rounded-md hover:bg-primary/10 transition-all"
           >
             Enviar
           </button>
