@@ -1,5 +1,5 @@
 import { FaComputer } from "react-icons/fa6";
-import { FaServer, FaShieldAlt, FaDatabase, FaCloud, FaRobot } from "react-icons/fa";
+import { FaServer, FaShieldAlt, FaDatabase, FaCloud, FaRobot, FaBrain } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -38,6 +38,12 @@ const skills = [
     title: "Automação",
     subtitle: "n8n, APIs & IA",
     description: "Criação de fluxos automatizados com n8n, integração com APIs externas e uso de inteligência artificial para automação de processos.",
+  },
+  {
+    Icon: FaBrain,
+    title: "IA & Pair Programming",
+    subtitle: "Antigravity, Gemini, Lovable",
+    description: "Uso de agentes de IA como assistentes de desenvolvimento para arquitetura, refatoração, debugging e aceleração de projetos via pair-programming.",
   },
 ];
 

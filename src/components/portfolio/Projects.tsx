@@ -3,8 +3,17 @@ import project1Img from "@/assets/project1.png";
 import project2Img from "@/assets/project2.png";
 import project3Img from "@/assets/project3.png";
 import project4Img from "@/assets/project4.png";
+import project5Img from "@/assets/project5.png";
 
 const projects = [
+  {
+    title: "Web Storage",
+    description:
+      "Plataforma de gerenciamento de arquivos em nuvem com design Glassmorphism. Desenvolvido com PHP 8.4, PostgreSQL, Docker, CI/CD com Jenkins e GitHub Actions, e pair-programming com IA (Antigravity).",
+    image: project5Img,
+    link: "https://github.com/FabricioLR/antigravity_sample_project",
+    tags: ["PHP", "PostgreSQL", "Docker", "CI/CD", "IA"],
+  },
   {
     title: "Notícias Diárias",
     description:
