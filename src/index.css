@@ -82,6 +82,7 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  caret-color: transparent;
 }
 
 /* Custom scrollbar */
