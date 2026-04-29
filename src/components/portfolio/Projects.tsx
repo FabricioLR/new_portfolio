@@ -4,6 +4,8 @@ import project2Img from "@/assets/project2.png";
 import project3Img from "@/assets/project3.png";
 import project4Img from "@/assets/project4.png";
 import project5Img from "@/assets/project5.png";
+import project6Img from "@/assets/project6.jpg";
+import project7Img from "@/assets/project7.jpg";
 
 const projects = [
   {
@@ -39,12 +41,20 @@ const projects = [
     tags: ["React", "JavaScript", "Vercel"],
   },
   {
-    title: "Chat",
+    title: "Grafana OCI Cost Plugin",
     description:
-      "Site para troca de mensagens feito em React e TypeScript que permite aos usuários enviarem mensagens em tempo real por meio do uso de Web Sockets.",
-    image: project2Img,
-    link: "https://github.com/FabricioLR/Chat-front",
-    tags: ["React", "TypeScript", "WebSocket"],
+      "Plugin de backend para o Grafana desenvolvido em Go que permite a visualização detalhada e monitoramento de custos da Oracle Cloud Infrastructure (OCI), com filtros avançados, cache interno e foco em FinOps.",
+    image: project6Img,
+    link: "https://github.com/FabricioLR/grafana_oci_cost_plugin",
+    tags: ["Go", "Grafana", "Oracle Cloud", "TypeScript"],
+  },
+  {
+    title: "Blog Pessoal",
+    description:
+      "Blog pessoal criado para compartilhar meus estudos, anotações e descobertas sobre desenvolvimento de software, infraestrutura e novas tecnologias. Construído em WordPress com domínio próprio.",
+    image: project7Img,
+    link: "https://blog.fabriciolr.online/",
+    tags: ["WordPress", "Blog", "Conteúdo"],
   },
 ];
 
