@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import project1Img from "@/assets/project1.png";
-import project2Img from "@/assets/project2.png";
+
 import project3Img from "@/assets/project3.png";
 import project4Img from "@/assets/project4.png";
 import project5Img from "@/assets/project5.png";
