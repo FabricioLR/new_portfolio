@@ -1,4 +1,4 @@
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaWordpress, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
