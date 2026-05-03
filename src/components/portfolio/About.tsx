@@ -22,9 +22,9 @@ const About = () => {
           className="bg-card border border-skill-border rounded-lg p-8 md:p-10"
         >
           <p className="text-foreground leading-relaxed text-base md:text-lg mb-6">
-            Estudante de Ciência da Computação com experiência em manutenção de hardware, software,
-            gerenciamento de servidores Linux e redes de computadores. Programador autodidata com
-            conhecimento em JavaScript, PHP, Python, SQL e Git.
+            Estudante de Ciência da Computação, programador autodidata focado em desenvolvimento PHP
+            e administrador de servidores Linux. Com experiência em infraestrutura On-Premise/Cloud,
+            ambientes Docker e monitoramento avançado (Zabbix/Prometheus/Grafana).
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
