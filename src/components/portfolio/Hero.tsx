@@ -1,22 +1,22 @@
 import { FaReact } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
-import { FaJava, FaAws, FaLinux } from "react-icons/fa";
+import { FaJava, FaAws, FaLinux, FaDocker, FaJenkins } from "react-icons/fa";
 import { SiMysql, SiRedux, SiPostgresql, SiSpringboot, SiSequelize, SiExpo, SiPhp, SiOracle, SiN8N } from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 const techs = [
-  { Icon: FaNodeJs, label: "Node.js" },
   { Icon: SiPhp, label: "PHP" },
-  { Icon: FaJava, label: "Java" },
   { Icon: TbBrandTypescript, label: "TypeScript" },
   { Icon: SiPostgresql, label: "PostgreSQL" },
   { Icon: SiMysql, label: "MySQL" },
   { Icon: SiOracle, label: "Oracle" },
   { Icon: FaAws, label: "Aws" },
   { Icon: FaLinux, label: "Linux" },
+  { Icon: FaDocker, label: "Docker" },
+  { Icon: FaJenkins, label: "Jenkins" },
   { Icon: SiN8N, label: "n8n" }
 ];
 
