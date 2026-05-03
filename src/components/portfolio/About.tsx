@@ -36,10 +36,13 @@ const About = () => {
               <FaGraduationCap className="text-primary flex-shrink-0" />
               <span className="text-sm">Ciência da Computação</span>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
+            <a
+              href="mailto:fabriciolongodearaujo@gmail.com"
+              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+            >
               <FaEnvelope className="text-primary flex-shrink-0" />
               <span className="text-sm">fabriciolongodearaujo@gmail.com</span>
-            </div>
+            </a>
           </div>
 
           <div className="mt-6">
@@ -60,7 +63,7 @@ const About = () => {
               }}
             >
               <FaDownload className="text-xs" />
-              Download Currículo
+              Currículo
             </a>
           </div>
         </motion.div>
