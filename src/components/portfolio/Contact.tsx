@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -62,6 +63,32 @@ const Contact = () => {
             Enviar
           </button>
         </motion.form>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mt-8 flex items-center gap-3"
+        >
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-xs text-muted-foreground uppercase tracking-wider">ou</span>
+          <div className="flex-1 h-px bg-border" />
+        </motion.div>
+
+        <motion.a
+          href="https://wa.me/5561995798701"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-6 w-full inline-flex items-center justify-center gap-2 border border-primary/50 text-primary font-medium py-3 rounded-md hover:bg-primary/10 transition-all"
+        >
+          <FaWhatsapp className="text-lg" />
+          Fale comigo no WhatsApp
+        </motion.a>
       </div>
     </section>
   );

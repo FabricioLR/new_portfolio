@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope, FaDownload, FaWhatsapp } from "react-icons/fa";
+import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope, FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -27,7 +27,7 @@ const About = () => {
             ambientes Docker e monitoramento avançado (Zabbix/Prometheus/Grafana).
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="flex items-center gap-3 text-muted-foreground">
               <FaMapMarkerAlt className="text-primary flex-shrink-0" />
               <span className="text-sm">Brasília – DF</span>
@@ -40,15 +40,6 @@ const About = () => {
               <FaEnvelope className="text-primary flex-shrink-0" />
               <span className="text-sm">fabriciolongodearaujo@gmail.com</span>
             </div>
-            <a
-              href="https://wa.me/5561995798701"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <FaWhatsapp className="text-primary flex-shrink-0" />
-              <span className="text-sm">+55 61 99579-8701</span>
-            </a>
           </div>
 
           <div className="mt-6">
