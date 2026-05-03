@@ -44,12 +44,12 @@ const About = () => {
 
           <div className="mt-6">
             <a
-              href="https://share.fabriciolr.online/caab6200-1521-4b0c-8804-c85929a4f946"
+              href="https://share.fabriciolr.online/ac4cd7ce-5214-428d-b053-624339b6c411"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-primary/50 text-primary font-medium px-4 py-2 rounded-md hover:bg-primary/10 transition-all text-sm"
               onClick={(e) => {
-                const url = "https://share.fabriciolr.online/caab6200-1521-4b0c-8804-c85929a4f946";
+                const url = "https://share.fabriciolr.online/ac4cd7ce-5214-428d-b053-624339b6c411";
                 fetch(url, { method: "HEAD", mode: "no-cors" }).catch(() => {
                   e.preventDefault();
                   const link = document.createElement("a");
