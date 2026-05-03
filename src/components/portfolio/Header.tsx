@@ -1,4 +1,4 @@
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaWordpress, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -58,16 +58,42 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <FaGithubSquare
-            fontSize={32}
-            className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-            onClick={() => window.open("https://github.com/FabricioLR", "_blank")}
-          />
-          <FaLinkedin
-            fontSize={32}
-            className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-            onClick={() => window.open("https://www.linkedin.com/in/fabricio-arauj/", "_blank")}
-          />
+          <a
+            href="https://github.com/FabricioLR"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FaGithubSquare fontSize={32} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/fabricio-arauj/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FaLinkedin fontSize={32} />
+          </a>
+          <a
+            href="https://blog.fabriciolr.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Blog WordPress"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FaWordpress fontSize={32} />
+          </a>
+          <a
+            href="https://wa.me/5561995798701"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FaWhatsapp fontSize={28} />
+          </a>
           <button
             className="md:hidden text-muted-foreground hover:text-primary transition-colors ml-1"
             onClick={() => setMenuOpen(!menuOpen)}

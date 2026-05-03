@@ -22,9 +22,9 @@ const About = () => {
           className="bg-card border border-skill-border rounded-lg p-8 md:p-10"
         >
           <p className="text-foreground leading-relaxed text-base md:text-lg mb-6">
-            Estudante de Ciência da Computação com experiência em manutenção de hardware, software,
-            gerenciamento de servidores Linux e redes de computadores. Programador autodidata com
-            conhecimento em JavaScript, PHP, Python, SQL e Git.
+            Estudante de Ciência da Computação, programador autodidata focado em desenvolvimento PHP
+            e administrador de servidores Linux. Com experiência em infraestrutura On-Premise/Cloud,
+            ambientes Docker e monitoramento avançado (Zabbix/Prometheus/Grafana).
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -44,12 +44,12 @@ const About = () => {
 
           <div className="mt-6">
             <a
-              href="https://share.fabriciolr.online/caab6200-1521-4b0c-8804-c85929a4f946"
+              href="https://share.fabriciolr.online/ac4cd7ce-5214-428d-b053-624339b6c411"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-primary/50 text-primary font-medium px-4 py-2 rounded-md hover:bg-primary/10 transition-all text-sm"
               onClick={(e) => {
-                const url = "https://share.fabriciolr.online/caab6200-1521-4b0c-8804-c85929a4f946";
+                const url = "https://share.fabriciolr.online/ac4cd7ce-5214-428d-b053-624339b6c411";
                 fetch(url, { method: "HEAD", mode: "no-cors" }).catch(() => {
                   e.preventDefault();
                   const link = document.createElement("a");
