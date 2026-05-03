@@ -6,6 +6,7 @@ import project4Img from "@/assets/project4.png";
 import project5Img from "@/assets/project5.png";
 import project6Img from "@/assets/project6.jpg";
 import project7Img from "@/assets/project7.jpg";
+import project8Img from "@/assets/project8.jpg";
 
 const projects = [
   {
@@ -55,6 +56,14 @@ const projects = [
     image: project7Img,
     link: "https://blog.fabriciolr.online/",
     tags: ["WordPress", "Blog", "Conteúdo"],
+  },
+  {
+    title: "Docker Dashboard",
+    description:
+      "Dashboard web em PHP para visualizar containers Docker em execução com links dinâmicos por porta. Utiliza docker-socket-proxy em modo read-only para reduzir a superfície de ataque.",
+    image: project8Img,
+    link: "https://github.com/FabricioLR/docker_dashboard",
+    tags: ["PHP", "Docker", "Nginx", "Segurança"],
   },
 ];
 
