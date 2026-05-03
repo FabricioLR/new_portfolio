@@ -73,14 +73,16 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map(({ title, description, image, link, tags }, i) => (
-            <motion.div
+            <motion.a
               key={title}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className="group cursor-pointer"
-              onClick={() => window.open(link, "_blank")}
+              className="group cursor-pointer block"
             >
               <div className="overflow-hidden rounded-lg mb-4 border border-border">
                 <img
@@ -103,7 +105,7 @@ const Projects = () => {
                 {title}
               </h3>
               <p className="text-sm text-project-muted mt-1 leading-relaxed">{description}</p>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
