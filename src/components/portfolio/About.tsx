@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope, FaDownload } from "react-icons/fa";
+import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope, FaDownload, FaWhatsapp } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -42,7 +42,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="https://share.fabriciolr.online/ac4cd7ce-5214-428d-b053-624339b6c411"
               target="_blank"
@@ -61,6 +61,15 @@ const About = () => {
             >
               <FaDownload className="text-xs" />
               Download Currículo
+            </a>
+            <a
+              href="https://wa.me/5561995798701"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-primary/50 text-primary font-medium px-4 py-2 rounded-md hover:bg-primary/10 transition-all text-sm"
+            >
+              <FaWhatsapp className="text-sm" />
+              Enviar mensagem
             </a>
           </div>
         </motion.div>

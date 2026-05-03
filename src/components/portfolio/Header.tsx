@@ -1,4 +1,4 @@
-import { FaGithubSquare, FaWordpress, FaWhatsapp } from "react-icons/fa";
+import { FaGithubSquare, FaWordpress } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
@@ -84,15 +84,6 @@ const Header = () => {
             className="text-muted-foreground hover:text-primary transition-colors"
           >
             <FaWordpress fontSize={32} />
-          </a>
-          <a
-            href="https://wa.me/5561995798701"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <FaWhatsapp fontSize={28} />
           </a>
           <button
             className="md:hidden text-muted-foreground hover:text-primary transition-colors ml-1"
