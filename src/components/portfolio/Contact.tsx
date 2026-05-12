@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-24 px-6 bg-secondary">
       <div className="max-w-2xl mx-auto">
@@ -11,7 +13,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center font-display text-3xl md:text-4xl font-bold text-foreground mb-12"
         >
-          Envie-me uma mensagem
+          {t("contact.title")}
         </motion.h2>
 
         <motion.form
@@ -25,42 +27,42 @@ const Contact = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <label className="flex flex-col gap-1.5">
-              <span className="text-sm text-muted-foreground">Seu nome</span>
+              <span className="text-sm text-muted-foreground">{t("contact.name")}</span>
               <input
                 type="text"
                 name="name"
                 required
                 className="bg-input border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                placeholder="João Silva"
+                placeholder={t("contact.namePlaceholder")}
               />
             </label>
             <label className="flex flex-col gap-1.5">
-              <span className="text-sm text-muted-foreground">Email</span>
+              <span className="text-sm text-muted-foreground">{t("contact.email")}</span>
               <input
                 type="email"
                 name="email"
                 required
                 className="bg-input border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                placeholder="joao@email.com"
+                placeholder={t("contact.emailPlaceholder")}
               />
             </label>
           </div>
           <label className="flex flex-col gap-1.5">
-            <span className="text-sm text-muted-foreground">Sua Mensagem</span>
+            <span className="text-sm text-muted-foreground">{t("contact.message")}</span>
             <textarea
               name="message"
               minLength={30}
               maxLength={1000}
               rows={5}
               className="bg-input border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
-              placeholder="Escreva sua mensagem aqui..."
+              placeholder={t("contact.messagePlaceholder")}
             />
           </label>
           <button
             type="submit"
             className="w-full border border-primary/50 text-primary font-medium py-3 rounded-md hover:bg-primary/10 transition-all"
           >
-            Enviar
+            {t("contact.send")}
           </button>
         </motion.form>
 
@@ -72,7 +74,7 @@ const Contact = () => {
           className="mt-8 flex items-center gap-3"
         >
           <div className="flex-1 h-px bg-border" />
-          <span className="text-xs text-muted-foreground uppercase tracking-wider">ou</span>
+          <span className="text-xs text-muted-foreground uppercase tracking-wider">{t("contact.or")}</span>
           <div className="flex-1 h-px bg-border" />
         </motion.div>
 
@@ -87,7 +89,7 @@ const Contact = () => {
           className="mt-6 w-full inline-flex items-center justify-center gap-2 border border-primary/50 text-primary font-medium py-3 rounded-md hover:bg-primary/10 transition-all"
         >
           <FaWhatsapp className="text-lg" />
-          Fale comigo no WhatsApp
+          {t("contact.whatsapp")}
         </motion.a>
       </div>
     </section>
