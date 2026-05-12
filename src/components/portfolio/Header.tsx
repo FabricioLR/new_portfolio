@@ -3,23 +3,27 @@ import { FaLinkedin } from "react-icons/fa6";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useCallback } from "react";
-
-const navLinks = [
-  { href: "#home", label: "Início" },
-  { href: "#about", label: "Sobre" },
-  { href: "#skills", label: "Habilidades" },
-  { href: "#experience", label: "Experiência" },
-  { href: "#projects", label: "Projetos" },
-  { href: "#contact", label: "Contato" },
-];
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const navLinks = [
+    { href: "#home", label: t("nav.home") },
+    { href: "#about", label: t("nav.about") },
+    { href: "#skills", label: t("nav.skills") },
+    { href: "#experience", label: t("nav.experience") },
+    { href: "#projects", label: t("nav.projects") },
+    { href: "#contact", label: t("nav.contact") },
+  ];
+
+  const currentLang = i18n.language?.startsWith("pt") ? "pt" : "en";
+  const toggleLang = () => i18n.changeLanguage(currentLang === "pt" ? "en" : "pt");
 
   const scrollToSection = useCallback((href: string, closeMobile = false) => {
     if (closeMobile) setMenuOpen(false);
 
-    // Small delay to let mobile menu close before scrolling
     setTimeout(() => {
       const id = href.replace("#", "");
       const el = document.getElementById(id);
@@ -31,6 +35,18 @@ const Header = () => {
     }, closeMobile ? 300 : 0);
   }, []);
 
+  const LangToggle = () => (
+    <button
+      onClick={toggleLang}
+      aria-label="Toggle language"
+      className="flex items-center gap-1 text-sm font-medium border border-border/60 rounded-md px-2 py-1 hover:border-primary/60 transition-colors"
+    >
+      <span className={currentLang === "pt" ? "text-primary" : "text-muted-foreground"}>PT</span>
+      <span className="text-muted-foreground/50">/</span>
+      <span className={currentLang === "en" ? "text-primary" : "text-muted-foreground"}>EN</span>
+    </button>
+  );
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -39,9 +55,7 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/50"
     >
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
-        <span className="font-display text-lg font-bold text-foreground tracking-wide">
-          
-        </span>
+        <LangToggle />
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(({ href, label }) => (
             <a

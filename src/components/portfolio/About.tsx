@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaMapMarkerAlt, FaEnvelope, FaDownload } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <section id="about" className="py-24 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
@@ -11,7 +13,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center font-display text-3xl md:text-4xl text-section-title mb-12"
         >
-          Sobre Mim
+          {t("about.title")}
         </motion.h2>
 
         <motion.div
@@ -22,19 +24,17 @@ const About = () => {
           className="bg-card border border-skill-border rounded-lg p-8 md:p-10"
         >
           <p className="text-foreground leading-relaxed text-base md:text-lg mb-6">
-            Estudante de Ciência da Computação, programador autodidata focado em desenvolvimento PHP
-            e administrador de servidores Linux. Com experiência em infraestrutura On-Premise/Cloud,
-            ambientes Docker e monitoramento avançado (Zabbix/Prometheus/Grafana).
+            {t("about.bio")}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="flex items-center gap-3 text-muted-foreground">
               <FaMapMarkerAlt className="text-primary flex-shrink-0" />
-              <span className="text-sm">Brasília – DF</span>
+              <span className="text-sm">{t("about.location")}</span>
             </div>
             <div className="flex items-center gap-3 text-muted-foreground">
               <FaGraduationCap className="text-primary flex-shrink-0" />
-              <span className="text-sm">Ciência da Computação</span>
+              <span className="text-sm">{t("about.education")}</span>
             </div>
             <a
               href="mailto:fabriciolongodearaujo@gmail.com"
@@ -63,7 +63,7 @@ const About = () => {
               }}
             >
               <FaDownload className="text-xs" />
-              Currículo
+              {t("about.resume")}
             </a>
           </div>
         </motion.div>
@@ -73,3 +73,4 @@ const About = () => {
 };
 
 export default About;
+

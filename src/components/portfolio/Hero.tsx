@@ -6,6 +6,7 @@ import { SiMysql, SiRedux, SiPostgresql, SiSpringboot, SiSequelize, SiExpo, SiPh
 import { ReactTyped } from "react-typed";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const techs = [
   { Icon: SiPhp, label: "PHP" },
@@ -22,13 +23,13 @@ const techs = [
 
 const Hero = () => {
   const [completed, setCompleted] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col items-center justify-center bg-hero-gradient relative pt-16"
     >
-      {/* Decorative glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 text-center px-4">
@@ -47,7 +48,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-lg sm:text-xl md:text-2xl text-hero-subtitle tracking-widest uppercase"
           >
-            <ReactTyped strings={["Infrastructure - Back End Developer"]} typeSpeed={80} />
+            <ReactTyped strings={[t("hero.subtitle")]} typeSpeed={80} />
           </motion.h2>
         )}
       </div>
