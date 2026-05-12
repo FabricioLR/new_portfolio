@@ -7,6 +7,8 @@ import project5Img from "@/assets/project5.png";
 import project6Img from "@/assets/project6.jpg";
 import project7Img from "@/assets/project7.jpg";
 import project8Img from "@/assets/project8.jpg";
+import project9Img from "@/assets/project9.jpg";
+import project10Img from "@/assets/project10.jpg";
 
 const projects = [
   {
@@ -64,6 +66,22 @@ const projects = [
     image: project8Img,
     link: "https://github.com/FabricioLR/docker_dashboard",
     tags: ["PHP", "Docker", "Nginx", "Segurança"],
+  },
+  {
+    title: "Stack de Observabilidade",
+    description:
+      "Stack de monitoramento e observabilidade pronta para produção com Docker Compose, integrando Prometheus, Loki, Promtail, Grafana e Alertmanager para métricas, logs e alertas em tempo real.",
+    image: project9Img,
+    link: "https://github.com/FabricioLR/monitoramento",
+    tags: ["Docker", "Prometheus", "Grafana", "Loki"],
+  },
+  {
+    title: "Chatbot AI - Protótipo",
+    description:
+      "Protótipo de assistente inteligente com RAG, integrando n8n, Groq (Llama 3.1) e embeddings da Hugging Face. Frontend servido via Nginx e orquestrado com Docker Compose.",
+    image: project10Img,
+    link: "https://github.com/FabricioLR/chatbot_prototype",
+    tags: ["n8n", "Groq", "RAG", "Docker"],
   },
 ];
 
